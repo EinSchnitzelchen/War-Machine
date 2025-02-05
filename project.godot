@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="PirateJam"
-run/main_scene="res://scenes/main_menu.tscn"
+run/main_scene="res://scenes/UIs/main_menu.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/Global.gd"
+Global="*res://scripts/Globals/Global.gd"
 
 [display]
 

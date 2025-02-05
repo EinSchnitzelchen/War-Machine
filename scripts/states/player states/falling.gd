@@ -1,10 +1,10 @@
 extends PlayerState
 
 func enter(_previous_state_path: String, _data := {}) -> void:
-	$"../../dummy/Movement"["parameters/conditions/is_falling"] = true
+	$"../../Model/Movement"["parameters/conditions/is_falling"] = true
 
 func exit() -> void:
-	$"../../dummy/Movement"["parameters/conditions/is_falling"] = false
+	$"../../Model/Movement"["parameters/conditions/is_falling"] = false
 
 func physics_update(delta: float) -> void:
 	var input_dir = Input.get_vector("walk_left", "walk_right", "walk_forwards", "walk_backwards")

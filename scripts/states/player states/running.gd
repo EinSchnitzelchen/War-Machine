@@ -1,13 +1,13 @@
 extends PlayerState
 
 func enter(_previous_state_path: String, _data := {}) -> void:
-	$"../../dummy/Movement"["parameters/conditions/is_running"] = true
+	$"../../Model/Movement"["parameters/conditions/is_running"] = true
 	
 	
 	player.current_speed = player.run_speed
 	
 func exit():
-	$"../../dummy/Movement"["parameters/conditions/is_running"] = false
+	$"../../Model/Movement"["parameters/conditions/is_running"] = false
 	
 func physics_update(delta: float) -> void:
 	var input_dir = Input.get_vector("walk_left", "walk_right", "walk_forwards", "walk_backwards")
@@ -23,12 +23,12 @@ func physics_update(delta: float) -> void:
 	player.velocity = player.velocity.lerp(direction * player.current_speed, player.ACCELERATION * player.FRICTION * delta)
 	player.velocity.y = y_velocity
 	
-	$"../../dummy/Movement"["parameters/Run/blend_position"] = input_dir
+	$"../../Model/Movement"["parameters/Run/blend_position"] = input_dir
 	
-	$"../../dummy/Movement".set("parameters/Run/0/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
-	$"../../dummy/Movement".set("parameters/Run/1/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
-	$"../../dummy/Movement".set("parameters/Run/2/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
-	$"../../dummy/Movement".set("parameters/Run/3/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
+	$"../../Model/Movement".set("parameters/Run/0/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
+	$"../../Model/Movement".set("parameters/Run/1/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
+	$"../../Model/Movement".set("parameters/Run/2/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
+	$"../../Model/Movement".set("parameters/Run/3/TimeScale/scale",  player.ACCELERATION * player.FRICTION / 3)
 	player.move_and_slide()
 
 	if not player.is_on_floor():

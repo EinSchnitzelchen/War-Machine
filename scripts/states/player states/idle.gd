@@ -1,12 +1,12 @@
 extends PlayerState
 
 func enter(_previous_state_path: String, _data := {}) -> void:
-	$"../../dummy/Movement"["parameters/conditions/idle"] = true
+	$"../../Model/Movement"["parameters/conditions/idle"] = true
 	
 	player.velocity.x = 0.0
 	
 func exit():
-	$"../../dummy/Movement"["parameters/conditions/idle"] = false
+	$"../../Model/Movement"["parameters/conditions/idle"] = false
 
 func physics_update(delta: float) -> void:
 	player.velocity.y -= player.gravity * delta

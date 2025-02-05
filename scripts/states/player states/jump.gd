@@ -2,18 +2,18 @@ extends PlayerState
 
 
 func enter(_previous_state_path: String, _data := {}) -> void:
-	$"../../dummy/Movement"["parameters/conditions/jump"] = true
+	$"../../Model/Movement"["parameters/conditions/jump"] = true
 	
 	if player.jump_count < player.max_jumps:
 		player.jump_count += 1
 		player.velocity.y = player.jump_impulse
 
 func exit() -> void:
-	$"../../dummy/Movement"["parameters/conditions/jump"] = false
+	$"../../Model/Movement"["parameters/conditions/jump"] = false
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("jump") && player.jump_count < player.max_jumps-1:
-		$"../../dummy/Movement"["parameters/conditions/jump"] = true
+		$"../../Model/Movement"["parameters/conditions/jump"] = true
 		player.jump_count += 1
 		player.velocity.y = player.jump_impulse
 

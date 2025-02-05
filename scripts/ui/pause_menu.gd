@@ -25,4 +25,4 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_menu_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/UIs/main_menu.tscn")
