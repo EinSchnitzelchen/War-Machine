@@ -1,0 +1,5 @@
+res://scenes/main_menu.tscn
+res://testmap.tscn
+res://scenes/player.tscn
+res://scenes/Enemies/charging_enemy.tscn
+res://scenes/Enemies/enemy.tscn
