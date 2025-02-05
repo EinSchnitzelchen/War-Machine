@@ -1,0 +1,9 @@
+res://scenes/Player/dummy.tscn
+res://scripts/ui/main_menu.gd
+res://scenes/UIs/main_menu.tscn
+res://testmap.tscn
+res://scenes/Player/player.tscn
+res://scenes/UIs/hud.tscn
+res://scripts/Player/player.gd
+res://scenes/UIs/Crosshair/center_container.gd
+res://scripts/ui/crosshair.gd

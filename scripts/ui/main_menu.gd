@@ -17,11 +17,11 @@ func _on_options_button_pressed() -> void:
 # ------------------------------------------------------------------------------------------------ #
 
 func _on_info_button_pressed() -> void:
-	pass # Replace with function body.
+	print("This is fckin your game, you know whats about lol")
 
 
 func _on_credits_button_pressed() -> void:
-	pass # Replace with function body.
+	print("Just me, Dragomy and the Failed Gamejam")
 
 
 func _on_start_button_pressed() -> void:

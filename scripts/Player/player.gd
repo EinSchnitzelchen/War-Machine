@@ -11,12 +11,12 @@ const max_health := 100
 # Forces
 @export var ACCELERATION := 3.4
 @export var FRICTION := 1
-@export var gravity := 9.81
+@export var gravity := 18
 
 # Speeds
-@export var speed :float= 10
+@export var speed :float= 6
 var current_speed :float= speed
-@export var run_speed := 20
+@export var run_speed := 12
 
 ## MOUSE/KEYBOARD/INPUT
 # Mouse settings
@@ -24,7 +24,7 @@ var current_speed :float= speed
 
 ## Player Movement
 var jump_count := 0
-@export var max_jumps := 3
+@export var max_jumps := 1
 @export var jump_impulse := 6
 
 ## Weapon Handling
