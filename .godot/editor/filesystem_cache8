@@ -1,7 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738787311
+::res://::1738787498
 icon.svg::CompressedTexture2D::5513081945461024508::1737662283::1737662358::1::::<><><>57a3fc0f86dddeb8fe44b7602ae0aa26<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
-testmap.tscn::PackedScene::7827514683032150269::1738787273::0::1::::<><><><>::uid://bsrcspqxa6mqa::::res://scripts/Levels/testmap.gd<>uid://u7jdafyhlaf6::::res://materials/grid.tres<>uid://duyb0w2ayelny::::res://scenes/Player/player.tscn<>uid://dtu0y14tfrmvc::::res://scenes/UIs/hud.tscn
+README.md::TextFile::3598857857214382579::1738785488::0::1::::<><><><>::
+testmap.tscn::PackedScene::7827514683032150269::1738787320::0::1::::<><><><>::uid://bsrcspqxa6mqa::::res://scripts/Levels/testmap.gd<>uid://u7jdafyhlaf6::::res://materials/grid.tres<>uid://duyb0w2ayelny::::res://scenes/Player/player.tscn<>uid://dtu0y14tfrmvc::::res://scenes/UIs/hud.tscn
 ::res://assets/::1738787195
 ::res://assets/Enemys/::1738514639
 Hover.gltf::PackedScene::7963406459436664568::1738514638::1738514638::1::::<><><>4a6d62a70922e46181932ca22ba7dd64<>res://.godot/imported/Hover.gltf-b2fed657f740e4637a51f4aef331a2c7.scn::uid://uwjikk5j8o5k::::res://assets/Enemys/Hover_0.png
@@ -32,13 +33,12 @@ palette_swap.gdshader::Shader::9218031186261014175::1738514639::0::1::::<><><><>
 ::res://scenes/::1738787239
 ::res://scenes/Enemies/::1738786221
 Hover.tres::StandardMaterial3D::6561757493117851903::1738786221::0::1::::<><><><>::uid://uwjikk5j8o5k::::res://assets/Enemys/Hover_0.png
-::res://scenes/Player/::1738787274
+::res://scenes/Player/::1738787331
 dummy.tscn::PackedScene::3498915841876833169::1738514639::0::1::::<><><><>::uid://27run7njc7xd::::res://assets/Player/dummy.glb
-player.tscn::PackedScene::8612690549033439198::1738787274::0::1::::<><><><>::uid://7mop8f38ra1w::::res://scripts/Player/player.gd<>uid://d4ljvkwmjtnyt::::res://materials/shaderscripts/palette_swap.gdshader<>uid://cd18oofinnqir::::res://scripts/Player/state_machine.gd<>uid://cdp6jb7a06cct::::res://scripts/states/player states/idle.gd<>uid://ckugq861uw51f::::res://scripts/states/player states/walking.gd<>uid://ba0y43hrefbyr::::res://assets/Looks/palette_pirate_jam.png<>uid://b0oxn1w2721t7::::res://scripts/states/player states/jump.gd<>uid://c7v6ujk538yrt::::res://scripts/states/player states/falling.gd<>uid://dp7d3iwwtfv6w::::res://scripts/states/player states/running.gd<>uid://mygyuq43g71::::res://scripts/ui/pause_menu.gd<>uid://c5esu0nwrv5gu::::res://assets/Looks/cogs.png<>uid://bp35vrolpnn2p::::res://scenes/Player/dummy.tscn
-::res://scenes/UIs/::1738787311
-hud.tscn::PackedScene::8535699830433062388::1738787274::0::1::::<><><><>::uid://bkymqhqvtcyd5::::res://scripts/ui/hud.gd
-main_menu.tscn::PackedScene::1952482939555326486::1738787273::0::1::::<><><><>::uid://c3w7334swbsfq::::res://scripts/ui/main_menu.gd<>uid://c5esu0nwrv5gu::::res://assets/Looks/cogs.png
-README.md::TextFile::3598857857214382579::1738785488::0::1::::<><><><>::
+player.tscn::PackedScene::8612690549033439198::1738787331::0::1::::<><><><>::uid://7mop8f38ra1w::::res://scripts/Player/player.gd<>uid://d4ljvkwmjtnyt::::res://materials/shaderscripts/palette_swap.gdshader<>uid://cd18oofinnqir::::res://scripts/Player/state_machine.gd<>uid://cdp6jb7a06cct::::res://scripts/states/player states/idle.gd<>uid://ckugq861uw51f::::res://scripts/states/player states/walking.gd<>uid://ba0y43hrefbyr::::res://assets/Looks/palette_pirate_jam.png<>uid://b0oxn1w2721t7::::res://scripts/states/player states/jump.gd<>uid://c7v6ujk538yrt::::res://scripts/states/player states/falling.gd<>uid://dp7d3iwwtfv6w::::res://scripts/states/player states/running.gd<>uid://mygyuq43g71::::res://scripts/ui/pause_menu.gd<>uid://c5esu0nwrv5gu::::res://assets/Looks/cogs.png<>uid://bp35vrolpnn2p::::res://scenes/Player/dummy.tscn
+::res://scenes/UIs/::1738787320
+hud.tscn::PackedScene::8535699830433062388::1738787320::0::1::::<><><><>::uid://bkymqhqvtcyd5::::res://scripts/ui/hud.gd
+main_menu.tscn::PackedScene::1952482939555326486::1738787320::0::1::::<><><><>::uid://c3w7334swbsfq::::res://scripts/ui/main_menu.gd<>uid://c5esu0nwrv5gu::::res://assets/Looks/cogs.png
 ::res://scripts/::1738787097
 ::res://scripts/Globals/::1738787065
 Global.gd::GDScript::422093466233761929::1738514639::0::1::::<>Node<><><>::
@@ -63,7 +63,7 @@ idle.gd::GDScript::5016271965523821031::1738786489::0::1::::<>PlayerState<><><>:
 jump.gd::GDScript::4171464170218551878::1738786583::0::1::::<>PlayerState<><><>::
 running.gd::GDScript::8278387402185028128::1738786583::0::1::::<>PlayerState<><><>::
 walking.gd::GDScript::5516412015875238241::1738786546::0::1::::<>PlayerState<><><>::
-::res://scripts/ui/::1738787097
+::res://scripts/ui/::1738787317
 hud.gd::GDScript::3138611756146497860::1737662284::0::1::::HUD<>Control<><><>::
 main_menu.gd::GDScript::6785539762138717290::1738514639::0::1::::<>Control<><><>::
-pause_menu.gd::GDScript::26241747861862690::1738514639::0::1::::<>Control<><><>::
+pause_menu.gd::GDScript::26241747861862690::1738787317::0::1::::<>Control<><><>::
