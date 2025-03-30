@@ -1,12 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://djrya13pqpmwj"]
+[gd_scene load_steps=19 format=3 uid="uid://djrya13pqpmwj"]
 
 [ext_resource type="Script" uid="uid://bsrcspqxa6mqa" path="res://scripts/Levels/testmap.gd" id="1_8vdae"]
 [ext_resource type="Material" uid="uid://u7jdafyhlaf6" path="res://materials/grid.tres" id="1_cas5d"]
 [ext_resource type="PackedScene" uid="uid://duyb0w2ayelny" path="res://scenes/Player/player.tscn" id="1_mvqnx"]
+[ext_resource type="ArrayMesh" uid="uid://b4qgyjve4bqbr" path="res://unityexport.obj" id="3_6seei"]
 [ext_resource type="PackedScene" uid="uid://dtu0y14tfrmvc" path="res://scenes/UIs/hud.tscn" id="3_ys0t5"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_llxnc"]
-viewport_path = NodePath("SubViewport")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sveaq"]
 size = Vector3(100, 0.2, 100)
@@ -47,8 +45,19 @@ size = Vector3(30, 20, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_35odk"]
 size = Vector3(30, 20, 1)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_llxnc"]
+viewport_path = NodePath("Node3D/SubViewport")
+
 [node name="Testmap" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -147.644, 0)
 script = ExtResource("1_8vdae")
+
+[node name="Player" parent="." instance=ExtResource("1_mvqnx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1263, 101.174, -13.3897)
+
+[node name="Unityexport" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+mesh = ExtResource("3_6seei")
 
 [node name="Maasstab" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
@@ -95,26 +104,6 @@ text = "10m"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.338919, 0.940816, -1.42132e-08, -0.094961, 0.0342087, 0.994893, 0.936011, -0.337188, 0.100935, 0, 1.12366, 0)
-
-[node name="Player" parent="." instance=ExtResource("1_mvqnx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.228775, 0)
-
-[node name="SubViewport" type="SubViewport" parent="."]
-
-[node name="Node3D" type="Node3D" parent="SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0162, 2.8821, 30.1786)
-
-[node name="Sprite3D" type="Sprite3D" parent="SubViewport/Node3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.44688, 2, 6)
-texture = SubResource("ViewportTexture_llxnc")
-
-[node name="Sprite3D2" type="Sprite3D" parent="SubViewport/Node3D"]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 9.44688, 2, 1.0218)
-texture = SubResource("ViewportTexture_llxnc")
-
-[node name="Camera3D" type="Camera3D" parent="SubViewport/Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.447, 0.0543385, 6.009)
-doppler_tracking = 1
 
 [node name="HUD" parent="." instance=ExtResource("3_ys0t5")]
 anchors_preset = 5
@@ -197,5 +186,22 @@ mesh = SubResource("BoxMesh_uvadd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D7"]
 shape = SubResource("BoxShape3D_35odk")
+
+[node name="SubViewport" type="SubViewport" parent="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="Node3D/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0162, -150.103, 30.1786)
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D/SubViewport/Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.44688, 2, 6)
+texture = SubResource("ViewportTexture_llxnc")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Node3D/SubViewport/Node3D"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 9.44688, 2, 1.0218)
+texture = SubResource("ViewportTexture_llxnc")
+
+[node name="Camera3D" type="Camera3D" parent="Node3D/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.447, 0.0543385, 6.009)
+doppler_tracking = 1
 
 [connection signal="health_changed" from="Player" to="HUD" method="_on_player_health_changed"]
